@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Seeble — Request deletion of your account and personal data."
+    />
+    <title>Delete Account & Data — Seeble</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #0d0a1e;
+        --surface: #14102b;
+        --border: #2a2050;
+        --primary: #7b5cf0;
+        --primary-d: #5b3dd0;
+        --danger: #ef4444;
+        --danger-d: #b91c1c;
+        --white: #ffffff;
+        --grey: #9ca3af;
+        --light: #d1d5db;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--light);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ── Header ── */
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      header h1 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--white);
+      }
+      header p {
+        font-size: 0.78rem;
+        color: var(--grey);
+        margin-top: 1px;
+      }
+
+      header a.back {
+        margin-left: auto;
+        font-size: 0.82rem;
+        color: var(--primary);
+        text-decoration: none;
+      }
+      header a.back:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Main ── */
+      main {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 48px 20px 80px;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 36px 32px;
+        width: 100%;
+        max-width: 520px;
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 28px 20px;
+        }
+      }
+
+      /* ── Icon ── */
+      .icon-wrap {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(239, 68, 68, 0.12);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin: 0 auto 20px;
+      }
+
+      .card h2 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      .card .subtitle {
+        font-size: 0.9rem;
+        color: var(--grey);
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      /* ── Warning box ── */
+      .warning {
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 28px;
+        font-size: 0.87rem;
+        color: #fca5a5;
+      }
+
+      .warning strong {
+        color: #f87171;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .warning ul {
+        padding-left: 16px;
+        margin: 0;
+      }
+
+      .warning li {
+        margin-bottom: 3px;
+      }
+
+      /* ── Form ── */
+      .field {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-size: 0.83rem;
+        font-weight: 600;
+        color: var(--light);
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      label .req {
+        color: var(--danger);
+        margin-left: 3px;
+      }
+
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 11px 14px;
+        font-size: 0.95rem;
+        color: var(--white);
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.2s;
+        -webkit-appearance: none;
+      }
+
+      input[type="email"]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--primary);
+      }
+
+      select {
+        cursor: pointer;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 90px;
+      }
+
+      /* ── Checkbox ── */
+      .check-wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--bg);
+        flex-shrink: 0;
+        margin-top: 2px;
+        accent-color: var(--danger);
+        cursor: pointer;
+      }
+
+      .check-wrap span {
+        font-size: 0.88rem;
+        color: var(--grey);
+        line-height: 1.5;
+      }
+
+      /* ── Button ── */
+      button[type="submit"] {
+        width: 100%;
+        padding: 13px;
+        background: var(--danger);
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          opacity 0.2s;
+        font-family: inherit;
+      }
+
+      button[type="submit"]:hover {
+        background: var(--danger-d);
+      }
+      button[type="submit"]:active {
+        opacity: 0.85;
+      }
+
+      /* ── Note ── */
+      .note {
+        margin-top: 20px;
+        font-size: 0.82rem;
+        color: var(--grey);
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      .note a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      .note a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Success state ── */
+      .success {
+        display: none;
+        text-align: center;
+        padding: 16px 0;
+      }
+
+      .success .check-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(34, 197, 94, 0.12);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        margin: 0 auto 20px;
+      }
+
+      .success h3 {
+        font-size: 1.2rem;
+        color: var(--white);
+        margin-bottom: 10px;
+      }
+
+      .success p {
+        font-size: 0.92rem;
+        color: var(--grey);
+        max-width: 340px;
+        margin: 0 auto 8px;
+      }
+
+      /* ── Footer ── */
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.78rem;
+        color: var(--grey);
+        border-top: 1px solid var(--border);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">✦</div>
+      <div>
+        <h1>Seeble</h1>
+        <p>Account & Data Deletion</p>
+      </div>
+      <a class="back" href="privacy-policy">← Privacy Policy</a>
+    </header>
+
+    <main>
+      <div class="card">
+        <!-- Form state -->
+        <div id="form-state">
+          <div class="icon-wrap">🗑️</div>
+          <h2>Delete My Account</h2>
+          <p class="subtitle">
+            Submit a request to permanently delete your Seeble account and all
+            associated personal data.
+          </p>
+
+          <div class="warning">
+            <strong>⚠ This action is irreversible</strong>
+            <ul>
+              <li>Your profile, name, email, and phone number</li>
+              <li>Your profile photo</li>
+              <li>Your astrological and soul mate preferences</li>
+              <li>All account history</li>
+            </ul>
+          </div>
+
+          <form id="deletion-form" novalidate>
+            <div class="field">
+              <label for="user-email"
+                >Registered email address <span class="req">*</span></label
+              >
+              <input
+                type="email"
+                id="user-email"
+                name="user-email"
+                placeholder="email@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="reason">Reason for deletion</label>
+              <select id="reason" name="reason">
+                <option value="">Select a reason (optional)</option>
+                <option value="No longer using the app">
+                  No longer using the app
+                </option>
+                <option value="Privacy concerns">Privacy concerns</option>
+                <option value="Switching to another service">
+                  Switching to another service
+                </option>
+                <option value="Technical issues">Technical issues</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Additional notes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                placeholder="Optional — any additional information you'd like to share."
+              ></textarea>
+            </div>
+
+            <div class="check-wrap">
+              <input type="checkbox" id="confirm" name="confirm" required />
+              <span
+                >I understand that deleting my account is permanent and cannot
+                be undone. All my personal data will be erased within
+                <strong style="color: var(--light)">30 days</strong>.</span
+              >
+            </div>
+
+            <button type="submit">Send Deletion Request</button>
+
+            <p class="note">
+              Your request will be sent to
+              <a href="mailto:support@Seeble.club">support@Seeble.club</a
+              >.<br />
+              We will process your request within 30 days as required by GDPR
+              and LGPD.
+            </p>
+          </form>
+        </div>
+
+        <!-- Success state -->
+        <div class="success" id="success-state">
+          <div class="check-icon">✓</div>
+          <h3>Request Sent</h3>
+          <p>
+            Your deletion request has been submitted. We will process it within
+            <strong style="color: var(--light)">30 days</strong> and send a
+            confirmation to your email.
+          </p>
+          <p style="margin-top: 12px">
+            If you have any questions, contact us at
+            <a href="mailto:support@Seeble.club" style="color: var(--primary)"
+              >support@Seeble.club</a
+            >.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © 2026 Insider Hub LLC · Seeble ·
+      <a
+        href="privacy-policy"
+        style="color: var(--primary); text-decoration: none"
+        >Privacy Policy</a
+      >
+    </footer>
+
+    <script>
+      document
+        .getElementById("deletion-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault()
+
+          var email = document.getElementById("user-email").value.trim()
+          var reason = document.getElementById("reason").value
+          var notes = document.getElementById("notes").value.trim()
+          var confirm = document.getElementById("confirm").checked
+
+          if (!email) {
+            alert("Please enter your registered email address.")
+            document.getElementById("user-email").focus()
+            return
+          }
+
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.")
+            document.getElementById("user-email").focus()
+            return
+          }
+
+          if (!confirm) {
+            alert(
+              "Please confirm that you understand this action is irreversible.",
+            )
+            document.getElementById("confirm").focus()
+            return
+          }
+
+          var subject = "Account Deletion Request — " + email
+
+          var body = [
+            "Hello Seeble Support,",
+            "",
+            "I would like to request the permanent deletion of my account and all associated personal data.",
+            "",
+            "Registered email: " + email,
+            reason ? "Reason: " + reason : "",
+            notes ? "Additional notes: " + notes : "",
+            "",
+            "I understand that this action is irreversible and all my data will be permanently deleted.",
+            "",
+            "Thank you.",
+          ]
+            .filter(function (line, i, arr) {
+              // remove consecutive blank lines caused by empty optional fields
+              return !(line === "" && arr[i - 1] === "")
+            })
+            .join("\n")
+
+          var mailtoLink =
+            "mailto:support@Seeble.club" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body)
+
+          window.location.href = mailtoLink
+
+          // show success after a short delay (email client opened)
+          setTimeout(function () {
+            document.getElementById("form-state").style.display = "none"
+            document.getElementById("success-state").style.display = "block"
+          }, 800)
+        })
+    </script>
+  </body>
+</html>
