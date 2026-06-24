@@ -1,701 +1,464 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Seeble Privacy Policy — How we collect, use and protect your personal information."
-    />
-    <title>Privacy Policy — Seeble</title>
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Seeble Privacy Policy — How we collect, use and protect your personal information." />
+  <title>Privacy Policy — Seeble</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-      :root {
-        --bg: #0d0a1e;
-        --surface: #14102b;
-        --border: #2a2050;
-        --primary: #7b5cf0;
-        --primary-d: #5b3dd0;
-        --white: #ffffff;
-        --grey: #9ca3af;
-        --light: #d1d5db;
-      }
+    :root {
+      --bg:        #0D0A1E;
+      --surface:   #14102B;
+      --border:    #2A2050;
+      --primary:   #7B5CF0;
+      --primary-d: #5B3DD0;
+      --white:     #FFFFFF;
+      --grey:      #9CA3AF;
+      --light:     #D1D5DB;
+    }
 
-      body {
-        background: var(--bg);
-        color: var(--light);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        font-size: 16px;
-        line-height: 1.7;
-      }
+    body {
+      background: var(--bg);
+      color: var(--light);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-      /* ── Header ── */
-      header {
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-        padding: 20px 24px;
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-      .logo {
-        width: 42px;
-        height: 42px;
-        border-radius: 10px;
-        background: var(--primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-        flex-shrink: 0;
-      }
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
 
-      header h1 {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--white);
-      }
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+    }
 
-      header p {
-        font-size: 0.8rem;
-        color: var(--grey);
-        margin-top: 1px;
-      }
+    header p {
+      font-size: 0.8rem;
+      color: var(--grey);
+      margin-top: 1px;
+    }
 
-      /* ── Main ── */
-      main {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 40px 20px 80px;
-      }
+    /* ── Main ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
 
-      /* ── Meta card ── */
-      .meta-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-left: 4px solid var(--primary);
-        border-radius: 12px;
-        padding: 20px 24px;
-        margin-bottom: 40px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px 24px;
-      }
+    /* ── Meta card ── */
+    .meta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
 
-      .meta-card .item label {
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--grey);
-        display: block;
-      }
+    .meta-card .item label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey);
+      display: block;
+    }
 
-      .meta-card .item span {
-        font-size: 0.9rem;
-        color: var(--white);
-        font-weight: 500;
-      }
+    .meta-card .item span {
+      font-size: 0.9rem;
+      color: var(--white);
+      font-weight: 500;
+    }
 
-      @media (max-width: 480px) {
-        .meta-card {
-          grid-template-columns: 1fr;
-        }
-      }
+    @media (max-width: 480px) {
+      .meta-card { grid-template-columns: 1fr; }
+    }
 
-      /* ── TOC ── */
-      .toc {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 20px 24px;
-        margin-bottom: 40px;
-      }
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
 
-      .toc h2 {
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--grey);
-        margin-bottom: 12px;
-      }
+    .toc h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey);
+      margin-bottom: 12px;
+    }
 
-      .toc ol {
-        padding-left: 18px;
-      }
+    .toc ol {
+      padding-left: 18px;
+    }
 
-      .toc li {
-        margin-bottom: 4px;
-      }
+    .toc li {
+      margin-bottom: 4px;
+    }
 
-      .toc a {
-        color: var(--primary);
-        text-decoration: none;
-        font-size: 0.92rem;
-      }
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
 
-      .toc a:hover {
-        text-decoration: underline;
-      }
+    .toc a:hover { text-decoration: underline; }
 
-      /* ── Sections ── */
-      section {
-        margin-bottom: 48px;
-        scroll-margin-top: 20px;
-      }
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 20px;
+    }
 
-      h2.section-title {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--white);
-        margin-bottom: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
+    h2.section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-      h2.section-title .num {
-        background: var(--primary);
-        color: var(--white);
-        font-size: 0.75rem;
-        font-weight: 700;
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
+    h2.section-title .num {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-      h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--white);
-        margin: 20px 0 10px;
-      }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin: 20px 0 10px;
+    }
 
-      p {
-        margin-bottom: 12px;
-        color: var(--light);
-      }
+    p { margin-bottom: 12px; color: var(--light); }
 
-      ul {
-        padding-left: 20px;
-        margin-bottom: 12px;
-      }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
 
-      ul li {
-        margin-bottom: 6px;
-        color: var(--light);
-      }
+    ul li {
+      margin-bottom: 6px;
+      color: var(--light);
+    }
 
-      ul li strong {
-        color: var(--white);
-      }
+    ul li strong { color: var(--white); }
 
-      a {
-        color: var(--primary);
-      }
-      a:hover {
-        text-decoration: underline;
-      }
+    a { color: var(--primary); }
+    a:hover { text-decoration: underline; }
 
-      /* ── Tables ── */
-      .table-wrap {
-        overflow-x: auto;
-        margin: 16px 0;
-      }
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.9rem;
-      }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
 
-      thead th {
-        background: var(--primary-d);
-        color: var(--white);
-        font-weight: 600;
-        text-align: left;
-        padding: 10px 14px;
-        white-space: nowrap;
-      }
+    thead th {
+      background: var(--primary-d);
+      color: var(--white);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      white-space: nowrap;
+    }
 
-      tbody tr:nth-child(odd) {
-        background: var(--surface);
-      }
-      tbody tr:nth-child(even) {
-        background: var(--bg);
-      }
+    tbody tr:nth-child(odd)  { background: var(--surface); }
+    tbody tr:nth-child(even) { background: var(--bg); }
 
-      tbody td {
-        padding: 10px 14px;
-        border-bottom: 1px solid var(--border);
-        color: var(--light);
-      }
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--light);
+    }
 
-      /* ── Callout boxes ── */
-      .callout {
-        border-radius: 10px;
-        padding: 16px 20px;
-        margin: 16px 0;
-        border-left: 4px solid;
-      }
+    /* ── Callout boxes ── */
+    .callout {
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid;
+    }
 
-      .callout.info {
-        background: #1a143a;
-        border-color: var(--primary);
-      }
-      .callout.warn {
-        background: #1a1200;
-        border-color: #f59e0b;
-      }
+    .callout.info  { background: #1A143A; border-color: var(--primary); }
+    .callout.warn  { background: #1A1200; border-color: #F59E0B; }
 
-      .callout p {
-        margin: 0;
-        font-size: 0.93rem;
-      }
-      .callout.warn p {
-        color: #fcd34d;
-      }
+    .callout p { margin: 0; font-size: 0.93rem; }
+    .callout.warn p { color: #FCD34D; }
 
-      /* ── Contact ── */
-      .contact-box {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 24px;
-        text-align: center;
-      }
+    /* ── Contact ── */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
 
-      .contact-box h3 {
-        margin-top: 0;
-      }
+    .contact-box h3 { margin-top: 0; }
 
-      .contact-box a {
-        display: inline-block;
-        margin-top: 10px;
-        background: var(--primary);
-        color: var(--white);
-        padding: 10px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition: background 0.2s;
-      }
+    .contact-box a {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
 
-      .contact-box a:hover {
-        background: var(--primary-d);
-      }
+    .contact-box a:hover { background: var(--primary-d); }
 
-      /* ── Footer ── */
-      footer {
-        text-align: center;
-        padding: 24px 20px;
-        font-size: 0.8rem;
-        color: var(--grey);
-        border-top: 1px solid var(--border);
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="logo">✦</div>
-      <div>
-        <h1>Seeble</h1>
-        <p>Privacy Policy</p>
-      </div>
-    </header>
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.8rem;
+      color: var(--grey);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
 
-    <main>
-      <!-- Meta -->
-      <div class="meta-card">
-        <div class="item">
-          <label>Last updated</label><span>May 7, 2026</span>
-        </div>
-        <div class="item"><label>App</label><span>Seeble</span></div>
-        <div class="item">
-          <label>Developer</label><span>Insider Hub LLC</span>
-        </div>
-        <div class="item">
-          <label>Contact</label
-          ><span
-            ><a href="mailto:support@appseeble.com"
-              >support@appseeble.com</a
-            ></span
-          >
-        </div>
-      </div>
+<header>
+  <div class="logo">✦</div>
+  <div>
+    <h1>Seeble</h1>
+    <p>Privacy Policy</p>
+  </div>
+</header>
 
-      <!-- TOC -->
-      <nav class="toc" aria-label="Table of contents">
-        <h2>Contents</h2>
-        <ol>
-          <li><a href="#s1">Introduction</a></li>
-          <li><a href="#s2">Information We Collect</a></li>
-          <li><a href="#s3">How We Use Your Information</a></li>
-          <li><a href="#s4">Third-Party Services</a></li>
-          <li><a href="#s5">Data Storage and Security</a></li>
-          <li><a href="#s6">Data Retention</a></li>
-          <li><a href="#s7">Your Rights</a></li>
-          <li><a href="#s8">Children's Privacy</a></li>
-          <li><a href="#s9">AI-Generated Content Disclaimer</a></li>
-          <li><a href="#s10">International Data Transfers</a></li>
-          <li><a href="#s11">Changes to This Policy</a></li>
-          <li><a href="#s12">Contact Us</a></li>
-        </ol>
-      </nav>
+<main>
 
-      <!-- 1 -->
-      <section id="s1">
-        <h2 class="section-title"><span class="num">1</span> Introduction</h2>
-        <p>
-          Seeble ("we", "our", or "us") is committed to protecting your privacy.
-          This Privacy Policy explains how we collect, use, and protect your
-          personal information when you use the Seeble mobile application.
-        </p>
-        <p>
-          By using Seeble, you agree to the collection and use of information as
-          described in this policy.
-        </p>
-      </section>
+  <!-- Meta -->
+  <div class="meta-card">
+    <div class="item"><label>Last updated</label><span>June 23, 2026</span></div>
+    <div class="item"><label>App</label><span>Seeble</span></div>
+    <div class="item"><label>Developer</label><span>Seeble</span></div>
+    <div class="item"><label>Contact</label><span><a href="mailto:support@appseeble.com">support@appseeble.com</a></span></div>
+  </div>
 
-      <!-- 2 -->
-      <section id="s2">
-        <h2 class="section-title">
-          <span class="num">2</span> Information We Collect
-        </h2>
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Introduction</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Your Information</a></li>
+      <li><a href="#s4">Third-Party Services</a></li>
+      <li><a href="#s5">Data Storage and Security</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Rights</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Entertainment Disclaimer</a></li>
+      <li><a href="#s10">International Data Transfers</a></li>
+      <li><a href="#s11">Changes to This Policy</a></li>
+      <li><a href="#s12">Contact Us</a></li>
+    </ol>
+  </nav>
 
-        <h3>2.1 Information You Provide</h3>
-        <ul>
-          <li>
-            <strong>Email address</strong> — used for account creation and
-            authentication
-          </li>
-          <li>
-            <strong>Name</strong> — used for your profile and personalization
-          </li>
-          <li>
-            <strong>Phone number</strong> — used for your profile (optional)
-          </li>
-          <li>
-            <strong>Profile photo</strong> — uploaded by you to personalize your
-            account
-          </li>
-        </ul>
+  <!-- 1 -->
+  <section id="s1">
+    <h2 class="section-title"><span class="num">1</span> Introduction</h2>
+    <p>Seeble ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use the Seeble mobile application.</p>
+    <p>By using Seeble, you agree to the collection and use of information as described in this policy.</p>
+  </section>
 
-        <h3>2.2 Information We Process During App Use</h3>
-        <ul>
-          <li>
-            <strong>Palm image</strong> — captured locally on your device when
-            using the Palm Reading feature. This image is processed temporarily
-            to generate a reading and is <strong>NOT stored</strong> on our
-            servers.
-          </li>
-          <li>
-            <strong>Chat messages</strong> — messages you send in the AI Chat
-            feature are processed by our AI provider (OpenAI) to generate
-            responses. Messages are not stored permanently beyond the current
-            session.
-          </li>
-          <li>
-            <strong>Astrological preferences</strong> — your zodiac sign, birth
-            date, and compatibility preferences used to generate readings.
-          </li>
-          <li>
-            <strong>Soul mate preferences</strong> — gender, age range, and
-            ethnic background preferences used to generate your soul mate image.
-          </li>
-        </ul>
+  <!-- 2 -->
+  <section id="s2">
+    <h2 class="section-title"><span class="num">2</span> Information We Collect</h2>
 
-        <h3>2.3 Automatically Collected Information</h3>
-        <ul>
-          <li>
-            <strong>App usage data</strong> — which features you use, to improve
-            the app experience.
-          </li>
-          <li>
-            <strong>Device information</strong> — operating system version and
-            device type, for compatibility purposes.
-          </li>
-        </ul>
-      </section>
+    <h3>2.1 Information You Provide</h3>
+    <ul>
+      <li><strong>Email address</strong> — used for account creation and authentication</li>
+      <li><strong>Name</strong> — used for your profile and personalization</li>
+      <li><strong>Phone number</strong> — used for your profile (optional)</li>
+      <li><strong>Profile photo</strong> — uploaded by you to personalize your account</li>
+    </ul>
 
-      <!-- 3 -->
-      <section id="s3">
-        <h2 class="section-title">
-          <span class="num">3</span> How We Use Your Information
-        </h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>Purpose</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Email, Name, Phone</td>
-                <td>Account management and authentication</td>
-              </tr>
-              <tr>
-                <td>Profile photo</td>
-                <td>Display in your profile</td>
-              </tr>
-              <tr>
-                <td>Palm image</td>
-                <td>Generate AI palm reading (temporary, not stored)</td>
-              </tr>
-              <tr>
-                <td>Chat messages</td>
-                <td>Generate AI responses via OpenAI</td>
-              </tr>
-              <tr>
-                <td>Astrological data</td>
-                <td>Generate personalized horoscopes and readings</td>
-              </tr>
-              <tr>
-                <td>Soul mate preferences</td>
-                <td>Generate your cosmic soul mate image</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+    <h3>2.2 Information We Process During App Use</h3>
+    <ul>
+      <li><strong>Palm image</strong> — captured locally on your device when using the Palm Reading feature. This image is processed temporarily to generate your reading and is <strong>NOT stored</strong> on our servers.</li>
+      <li><strong>Chat messages</strong> — messages you send in the Chat feature are sent to our servers so our team can prepare a response. Messages are not stored permanently beyond the current session.</li>
+      <li><strong>Astrological preferences</strong> — your zodiac sign, birth date, and compatibility preferences used to prepare your readings.</li>
+      <li><strong>Soul mate preferences</strong> — gender, age range, and ethnic background preferences used to select your soul mate image.</li>
+    </ul>
 
-      <!-- 4 -->
-      <section id="s4">
-        <h2 class="section-title">
-          <span class="num">4</span> Third-Party Services
-        </h2>
-        <p>We use the following third-party services to operate the app:</p>
+    <h3>2.3 Automatically Collected Information</h3>
+    <ul>
+      <li><strong>App usage data</strong> — which features you use, to improve the app experience.</li>
+      <li><strong>Device information</strong> — operating system version and device type, for compatibility purposes.</li>
+    </ul>
+  </section>
 
-        <h3>4.1 Supabase</h3>
-        <p>
-          We use Supabase (<a
-            href="https://supabase.com"
-            target="_blank"
-            rel="noopener"
-            >supabase.com</a
-          >) as our backend database and storage provider. Your profile data
-          (email, name, phone, profile photo) is stored securely on Supabase
-          servers.
-        </p>
-        <ul>
-          <li>
-            <strong>Supabase Privacy Policy</strong>:
-            <a
-              href="https://supabase.com/privacy"
-              target="_blank"
-              rel="noopener"
-              >supabase.com/privacy</a
-            >
-          </li>
-        </ul>
+  <!-- 3 -->
+  <section id="s3">
+    <h2 class="section-title"><span class="num">3</span> How We Use Your Information</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Email, Name, Phone</td><td>Account management and authentication</td></tr>
+          <tr><td>Profile photo</td><td>Display in your profile</td></tr>
+          <tr><td>Palm image</td><td>Produce your palm reading (temporary, not stored)</td></tr>
+          <tr><td>Chat messages</td><td>Respond to your messages</td></tr>
+          <tr><td>Astrological data</td><td>Produce personalized horoscopes and readings</td></tr>
+          <tr><td>Soul mate preferences</td><td>Select your cosmic soul mate image</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-        <h3>4.2 OpenAI</h3>
-        <p>
-          We use OpenAI (<a
-            href="https://openai.com"
-            target="_blank"
-            rel="noopener"
-            >openai.com</a
-          >) to power our AI Chat feature and Palm Reading analysis. Messages
-          sent to the AI Chat and palm reading requests are processed by
-          OpenAI's servers.
-        </p>
-        <ul>
-          <li>
-            <strong>OpenAI Privacy Policy</strong>:
-            <a
-              href="https://openai.com/policies/privacy-policy"
-              target="_blank"
-              rel="noopener"
-              >openai.com/policies/privacy-policy</a
-            >
-          </li>
-          <li>
-            We do not use your data to train OpenAI models (zero data retention
-            policy applies).
-          </li>
-        </ul>
-      </section>
+  <!-- 4 -->
+  <section id="s4">
+    <h2 class="section-title"><span class="num">4</span> Third-Party Services</h2>
+    <p>We use the following third-party services to operate the app:</p>
 
-      <!-- 5 -->
-      <section id="s5">
-        <h2 class="section-title">
-          <span class="num">5</span> Data Storage and Security
-        </h2>
-        <ul>
-          <li>
-            Your profile data is stored on Supabase servers with encryption in
-            transit (TLS/HTTPS).
-          </li>
-          <li>
-            Palm reading images are processed temporarily and are
-            <strong>NOT stored</strong> on any server.
-          </li>
-          <li>
-            Chat messages are sent to OpenAI for processing and are not
-            permanently stored by us.
-          </li>
-          <li>
-            We implement appropriate technical and organizational measures to
-            protect your data.
-          </li>
-        </ul>
-      </section>
+    <h3>4.1 Supabase</h3>
+    <p>We use Supabase (<a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a>) as our backend database and storage provider. Your profile data (email, name, phone, profile photo) is stored securely on Supabase servers.</p>
+    <ul>
+      <li><strong>Supabase Privacy Policy</strong>: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+    </ul>
 
-      <!-- 6 -->
-      <section id="s6">
-        <h2 class="section-title"><span class="num">6</span> Data Retention</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Data Type</th>
-                <th>Retention Period</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Account data (email, name, phone)</td>
-                <td>Until you delete your account</td>
-              </tr>
-              <tr>
-                <td>Profile photo</td>
-                <td>Until you remove it or delete your account</td>
-              </tr>
-              <tr>
-                <td>Palm reading images</td>
-                <td>Not stored — processed in real-time only</td>
-              </tr>
-              <tr>
-                <td>Chat messages</td>
-                <td>Session-only on device; not stored on our servers</td>
-              </tr>
-              <tr>
-                <td>Astrological preferences</td>
-                <td>Until you delete your account</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+    <h3>4.2 Cloud processing providers</h3>
+    <p>We rely on commercial cloud-processing providers to deliver chat responses and palm-reading content within reasonable response times. These providers receive only the data strictly required to fulfill your request (message text or palm image) and do not retain it for their own purposes.</p>
+  </section>
 
-      <!-- 7 -->
-      <section id="s7">
-        <h2 class="section-title"><span class="num">7</span> Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-          <li><strong>Access</strong> your personal data</li>
-          <li>
-            <strong>Correct</strong> inaccurate data through the Edit Profile
-            screen
-          </li>
-          <li>
-            <strong>Delete</strong> your account and all associated data through
-            the "Delete My Account" option in the app
-          </li>
-          <li>
-            <strong>Withdraw consent</strong> at any time by deleting the app
-          </li>
-        </ul>
-        <div class="callout info">
-          <p>
-            To exercise these rights, contact us at:
-            <a href="mailto:support@appseeble.com">support@appseeble.com</a>
-          </p>
-        </div>
-      </section>
+  <!-- 5 -->
+  <section id="s5">
+    <h2 class="section-title"><span class="num">5</span> Data Storage and Security</h2>
+    <ul>
+      <li>Your profile data is stored on Supabase servers with encryption in transit (TLS/HTTPS).</li>
+      <li>Palm reading images are processed temporarily and are <strong>NOT stored</strong> on any server.</li>
+      <li>Chat messages are processed in real time and are not permanently stored by us.</li>
+      <li>We implement appropriate technical and organizational measures to protect your data.</li>
+    </ul>
+  </section>
 
-      <!-- 8 -->
-      <section id="s8">
-        <h2 class="section-title">
-          <span class="num">8</span> Children's Privacy
-        </h2>
-        <p>
-          Seeble is not intended for children under the age of 13. We do not
-          knowingly collect personal information from children under 13. If you
-          believe a child has provided us with personal information, please
-          contact us immediately.
-        </p>
-      </section>
+  <!-- 6 -->
+  <section id="s6">
+    <h2 class="section-title"><span class="num">6</span> Data Retention</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data Type</th><th>Retention Period</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Account data (email, name, phone)</td><td>Until you delete your account</td></tr>
+          <tr><td>Profile photo</td><td>Until you remove it or delete your account</td></tr>
+          <tr><td>Palm reading images</td><td>Not stored — processed in real-time only</td></tr>
+          <tr><td>Chat messages</td><td>Session-only on device; not stored on our servers</td></tr>
+          <tr><td>Astrological preferences</td><td>Until you delete your account</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      <!-- 9 -->
-      <section id="s9">
-        <h2 class="section-title">
-          <span class="num">9</span> AI-Generated Content Disclaimer
-        </h2>
-        <div class="callout warn">
-          <p>
-            ⚠ All horoscopes, palm readings, numerology readings, and AI chat
-            responses are generated by artificial intelligence for
-            <strong>entertainment purposes only</strong>. This content does not
-            constitute professional, medical, financial, psychological, or any
-            other form of advice. Do not make important life decisions based
-            solely on AI-generated readings.
-          </p>
-        </div>
-      </section>
+  <!-- 7 -->
+  <section id="s7">
+    <h2 class="section-title"><span class="num">7</span> Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> your personal data</li>
+      <li><strong>Correct</strong> inaccurate data through the Edit Profile screen</li>
+      <li><strong>Delete</strong> your account and all associated data through the "Delete My Account" option in the app</li>
+      <li><strong>Withdraw consent</strong> at any time by deleting the app</li>
+    </ul>
+    <div class="callout info">
+      <p>To exercise these rights, contact us at: <a href="mailto:support@appseeble.com">support@appseeble.com</a></p>
+    </div>
+  </section>
 
-      <!-- 10 -->
-      <section id="s10">
-        <h2 class="section-title">
-          <span class="num">10</span> International Data Transfers
-        </h2>
-        <p>
-          Your data may be processed on servers located outside your country of
-          residence. By using Seeble, you consent to the transfer of your data
-          to our service providers' servers, which maintain appropriate data
-          protection standards.
-        </p>
-      </section>
+  <!-- 8 -->
+  <section id="s8">
+    <h2 class="section-title"><span class="num">8</span> Children's Privacy</h2>
+    <p>Seeble is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+  </section>
 
-      <!-- 11 -->
-      <section id="s11">
-        <h2 class="section-title">
-          <span class="num">11</span> Changes to This Policy
-        </h2>
-        <p>
-          We may update this Privacy Policy from time to time. We will notify
-          you of significant changes by updating the "Last updated" date at the
-          top of this document. Your continued use of the app after changes
-          constitute acceptance of the updated policy.
-        </p>
-      </section>
+  <!-- 9 -->
+  <section id="s9">
+    <h2 class="section-title"><span class="num">9</span> Entertainment Disclaimer</h2>
+    <div class="callout warn">
+      <p>⚠ All horoscopes, palm readings, numerology readings, and chat responses are produced by our team for <strong>entertainment purposes only</strong>. This content does not constitute professional, medical, financial, psychological, or any other form of advice. Do not make important life decisions based solely on the readings provided through this app.</p>
+    </div>
+  </section>
 
-      <!-- 12 -->
-      <section id="s12">
-        <h2 class="section-title"><span class="num">12</span> Contact Us</h2>
-        <div class="contact-box">
-          <h3>Questions about this policy?</h3>
-          <p style="color: var(--grey); font-size: 0.9rem; margin-top: 6px">
-            We're happy to help with any privacy-related questions.
-          </p>
-          <a href="mailto:support@appseeble.com">support@appseeble.com</a>
-        </div>
-      </section>
-    </main>
+  <!-- 10 -->
+  <section id="s10">
+    <h2 class="section-title"><span class="num">10</span> International Data Transfers</h2>
+    <p>Your data may be processed on servers located outside your country of residence. By using Seeble, you consent to the transfer of your data to our service providers' servers, which maintain appropriate data protection standards.</p>
+  </section>
 
-    <footer>
-      <p>
-        © 2026 Insider Hub LLC · Seeble · Prepared for compliance with Google
-        Play Store, Apple App Store, GDPR and LGPD.
-      </p>
-    </footer>
-  </body>
+  <!-- 11 -->
+  <section id="s11">
+    <h2 class="section-title"><span class="num">11</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last updated" date at the top of this document. Your continued use of the app after changes constitute acceptance of the updated policy.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2 class="section-title"><span class="num">12</span> Contact Us</h2>
+    <div class="contact-box">
+      <h3>Questions about this policy?</h3>
+      <p style="color: var(--grey); font-size: 0.9rem; margin-top: 6px;">We're happy to help with any privacy-related questions.</p>
+      <a href="mailto:support@appseeble.com">support@appseeble.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Seeble · Prepared for compliance with Google Play Store, Apple App Store, GDPR and LGPD.</p>
+</footer>
+
+</body>
 </html>
