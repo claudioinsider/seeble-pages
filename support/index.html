@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Seeble Support — Get help, find answers to common questions, and contact our team." />
+  <title>Support — Seeble</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0D0A1E;
+      --surface:   #14102B;
+      --border:    #2A2050;
+      --primary:   #7B5CF0;
+      --primary-d: #5B3DD0;
+      --white:     #FFFFFF;
+      --grey:      #9CA3AF;
+      --light:     #D1D5DB;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--light);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    header p {
+      font-size: 0.8rem;
+      color: var(--grey);
+      margin-top: 1px;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .hero h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: var(--grey);
+      font-size: 0.98rem;
+      max-width: 520px;
+      margin: 0 auto 20px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--primary-d); }
+
+    /* ── Meta card ── */
+    .meta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+
+    .meta-card .item label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey);
+      display: block;
+    }
+
+    .meta-card .item span {
+      font-size: 0.9rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .meta-card { grid-template-columns: 1fr; }
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 20px;
+    }
+
+    h2.section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { margin-bottom: 12px; color: var(--light); }
+
+    a { color: var(--primary); }
+    a:hover { text-decoration: underline; }
+
+    /* ── FAQ accordion ── */
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 20px;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.98rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      color: var(--primary);
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item .answer {
+      padding: 0 20px 16px;
+      color: var(--light);
+      font-size: 0.95rem;
+    }
+
+    /* ── Contact ── */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .contact-box a.email {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .contact-box a.email:hover { background: var(--primary-d); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.8rem;
+      color: var(--grey);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--grey); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">✦</div>
+  <div>
+    <h1>Seeble</h1>
+    <p>Support</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>How can we help?</h2>
+    <p>Have a question or running into an issue? Browse the answers below or reach our team directly — we're here to help.</p>
+    <a class="btn-primary" href="mailto:support@appseeble.com">Contact Support</a>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta-card">
+    <div class="item"><label>App</label><span>Seeble</span></div>
+    <div class="item"><label>Developer</label><span>Seeble</span></div>
+    <div class="item"><label>Contact</label><span><a href="mailto:support@appseeble.com">support@appseeble.com</a></span></div>
+    <div class="item"><label>Response time</label><span>Within 1–2 business days</span></div>
+  </div>
+
+  <!-- About the Service -->
+  <section>
+    <h2 class="section-title">About the Service</h2>
+
+    <details class="faq-item">
+      <summary>What is Seeble?</summary>
+      <div class="answer">Seeble is a personalized soulmate reading and sketch service. Through a guided quiz, we analyze your preferences, personality traits, and energy to prepare a unique sketch and profile of your ideal partner.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does the soulmate sketch work?</summary>
+      <div class="answer">After completing our quiz and providing a face photo, we analyze your responses and prepare a personalized sketch along with detailed insights about your potential soulmate's traits, love style, and compatibility.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How are my readings and sketch created?</summary>
+      <div class="answer">Your readings and sketch are produced by our team and automated systems based on the responses you provide through the quiz and the details in your profile.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is this real or just for entertainment?</summary>
+      <div class="answer">Our service is provided for entertainment purposes. While many users find our readings insightful and surprisingly accurate, results should not be taken as guaranteed predictions.</div>
+    </details>
+  </section>
+
+  <!-- Account & Privacy -->
+  <section>
+    <h2 class="section-title">Account &amp; Privacy</h2>
+
+    <details class="faq-item">
+      <summary>Is my data safe?</summary>
+      <div class="answer">Yes. We use industry-standard encryption and security measures. Your payment information is processed securely by our payment provider and is never stored on our servers.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you sell my personal information?</summary>
+      <div class="answer">No. We do not sell your personal information to third parties.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I delete my account?</summary>
+      <div class="answer">To delete your account and all associated data, contact us at <a href="mailto:support@appseeble.com">support@appseeble.com</a>. We will process your request within 30 days.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What happens to my face photo?</summary>
+      <div class="answer">Photos uploaded for the face scan feature are processed temporarily to prepare your reading and are not permanently stored on our servers.</div>
+    </details>
+  </section>
+
+  <!-- Technical Issues -->
+  <section>
+    <h2 class="section-title">Technical Issues</h2>
+
+    <details class="faq-item">
+      <summary>The app or quiz is not loading. What should I do?</summary>
+      <div class="answer">Try closing and reopening the app, checking your internet connection, or restarting your device. If the issue persists, contact <a href="mailto:support@appseeble.com">support@appseeble.com</a>.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>I didn't receive my reading. What should I do?</summary>
+      <div class="answer">Give it a few moments to finish preparing. If you still haven't received it, contact <a href="mailto:support@appseeble.com">support@appseeble.com</a> with your account email and we'll look into it.</div>
+    </details>
+  </section>
+
+  <!-- Still need help -->
+  <section>
+    <div class="contact-box">
+      <h3>Still need help?</h3>
+      <p style="color: var(--grey); font-size: 0.9rem; margin-top: 6px;">Email our support team and we'll get back to you within 1–2 business days.</p>
+      <a class="email" href="mailto:support@appseeble.com">support@appseeble.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Seeble · <a href="privacy-policy.html">Privacy Policy</a> · Prepared for compliance with the Apple App Store.</p>
+</footer>
+
+</body>
+</html>
