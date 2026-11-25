@@ -1,148 +1,481 @@
-# Privacy Policy — Seeble
-**Last updated**: November 25, 2026  
-**App**: Seeble  
-**Developer**: Insider Hub LLC  
-**Contact**: support@appseeble.com
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Seeble Privacy Policy — How we collect, use and protect your personal information." />
+  <title>Privacy Policy — Seeble</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
----
+    :root {
+      --bg:        #0D0A1E;
+      --surface:   #14102B;
+      --border:    #2A2050;
+      --primary:   #7B5CF0;
+      --primary-d: #5B3DD0;
+      --white:     #FFFFFF;
+      --grey:      #9CA3AF;
+      --light:     #D1D5DB;
+    }
 
-## 1. Introduction
+    body {
+      background: var(--bg);
+      color: var(--light);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-Seeble ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use the Seeble mobile application.
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-By using Seeble, you agree to the collection and use of information as described in this policy.
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
 
----
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+    }
 
-## 2. Information We Collect
+    header p {
+      font-size: 0.8rem;
+      color: var(--grey);
+      margin-top: 1px;
+    }
 
-### 2.1 Information You Provide
-- **Email address** — used for account creation and authentication
-- **Name** — used for your profile and personalization
-- **Phone number** — used for your profile (optional)
-- **Profile photo** — uploaded by you to personalize your account
+    /* ── Main ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
 
-### 2.2 Information We Process During App Use
-- **Palm image** — captured locally on your device when using the Palm Reading feature. This image is processed temporarily to generate your reading and is NOT stored on our servers.
-- **Chat messages** — messages you send in the Chat feature are sent to our servers so our team can prepare a response. Messages are not stored permanently beyond the current session.
-- **Astrological preferences** — your zodiac sign, birth date, and compatibility preferences used to prepare your readings.
-- **Soul mate preferences** — gender, age range, and ethnic background preferences used to select your soul mate image.
+    /* ── Meta card ── */
+    .meta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
 
-### 2.3 Automatically Collected Information
-- **App usage data** — which features you use, to improve the app experience.
-- **Device information** — operating system version and device type, for compatibility purposes.
-- **Advertising and device identifiers** — on iOS, the Advertising Identifier (IDFA), and only if you allow it through the App Tracking Transparency prompt the app shows you; on Android, the Google Advertising ID. Our attribution partner also creates its own identifier for your app installation.
-- **Marketing attribution data** — which ad or campaign your installation came from, and the in-app milestones listed in section 3 (creating an account, starting a free trial, subscribing, buying credits), including the amount and currency of a purchase.
+    .meta-card .item label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey);
+      display: block;
+    }
 
-### 2.4 Apple Health (HealthKit)
-If you turn on Apple Health sync (off by default), Seeble writes the duration of your completed meditation, breathing, and Flow sessions to Apple Health as Mindful Minutes. This is **write-only** — the app does not read any data from Apple Health — and your health data **stays on your device**; it is never sent to our servers or shared with any third party. You can turn the sync off at any time in your profile.
+    .meta-card .item span {
+      font-size: 0.9rem;
+      color: var(--white);
+      font-weight: 500;
+    }
 
----
+    @media (max-width: 480px) {
+      .meta-card { grid-template-columns: 1fr; }
+    }
 
-## 3. How We Use Your Information
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
 
-| Data | Purpose |
-|------|---------|
-| Email, Name, Phone | Account management and authentication |
-| Profile photo | Display in your profile |
-| Palm image | Produce your palm reading (temporary, not stored) |
-| Chat messages | Respond to your messages |
-| Astrological data | Produce personalized horoscopes and readings |
-| Soul mate preferences | Select your cosmic soul mate image |
-| Advertising identifier | Measure which ads bring people to Seeble |
-| Purchase amount and currency | Measure how well our ads perform |
+    .toc h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey);
+      margin-bottom: 12px;
+    }
 
----
+    .toc ol {
+      padding-left: 18px;
+    }
 
-## 4. Third-Party Services
+    .toc li {
+      margin-bottom: 4px;
+    }
 
-We use the following third-party services to operate the app:
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
 
-### 4.1 Supabase
-We use Supabase (supabase.com) as our backend database and storage provider. Your profile data (email, name, phone, profile photo) is stored securely on Supabase servers.
-- **Supabase Privacy Policy**: https://supabase.com/privacy
+    .toc a:hover { text-decoration: underline; }
 
-### 4.2 Cloud processing providers
-We rely on commercial cloud-processing providers to deliver chat responses and palm-reading content within reasonable response times. These providers receive only the data strictly required to fulfill your request (message text or palm image) and do not retain it for their own purposes.
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 20px;
+    }
 
-### 4.3 AppsFlyer
-We use AppsFlyer Ltd. (appsflyer.com) as our marketing attribution partner, to measure which ads bring people to Seeble. AppsFlyer receives a hashed account identifier — **never your email address** — your advertising identifier when you allow it, and the value and currency of your purchases. AppsFlyer shares the attribution result with the advertising networks we run campaigns on, currently Meta Platforms, Inc. and Google LLC.
+    h2.section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent before AppsFlyer starts measuring and passes your choice to AppsFlyer, which passes it on to Google. If you decline, AppsFlyer still counts the installation, but tells the advertising networks not to use your data for ad measurement or personalization.
-- **AppsFlyer Privacy Policy**: https://www.appsflyer.com/legal/services-privacy-policy/
-- **Meta Privacy Policy**: https://www.facebook.com/privacy/policy/
-- **Google Privacy Policy**: https://policies.google.com/privacy
+    h2.section-title .num {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
----
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin: 20px 0 10px;
+    }
 
-## 5. Data Storage and Security
+    p { margin-bottom: 12px; color: var(--light); }
 
-- Your profile data is stored on Supabase servers with encryption in transit (TLS/HTTPS).
-- Palm reading images are processed temporarily and are NOT stored on any server.
-- Chat messages are processed in real time and are not permanently stored by us.
-- We implement appropriate technical and organizational measures to protect your data.
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
 
----
+    ul li {
+      margin-bottom: 6px;
+      color: var(--light);
+    }
 
-## 6. Data Retention
+    ul li strong { color: var(--white); }
 
-| Data Type | Retention Period |
-|-----------|-----------------|
-| Account data (email, name, phone) | Until you delete your account |
-| Profile photo | Until you remove it or delete your account |
-| Palm reading images | Not stored — processed in real-time only |
-| Chat messages | Session-only on device; not stored on our servers |
-| Astrological preferences | Until you delete your account |
+    a { color: var(--primary); }
+    a:hover { text-decoration: underline; }
 
----
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
 
-## 7. Your Rights
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
 
-You have the right to:
-- **Access** your personal data
-- **Correct** inaccurate data through the Edit Profile screen
-- **Delete** your account and all associated data through the "Delete My Account" option in the app
-- **Withdraw consent** at any time by deleting the app
-- **Change your ad data choice** at any time (European Economic Area, United Kingdom and Switzerland): in the app, under Legal Center → Privacy choices
-- **Opt out of ad measurement** at any time: on iOS, in Settings → Privacy & Security → Tracking; on Android, in Settings → Google → Ads → Delete advertising ID
+    thead th {
+      background: var(--primary-d);
+      color: var(--white);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      white-space: nowrap;
+    }
 
-To exercise these rights, contact us at: support@appseeble.com
+    tbody tr:nth-child(odd)  { background: var(--surface); }
+    tbody tr:nth-child(even) { background: var(--bg); }
 
----
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--light);
+    }
 
-## 8. Children's Privacy
+    /* ── Callout boxes ── */
+    .callout {
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid;
+    }
 
-Seeble is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.
+    .callout.info  { background: #1A143A; border-color: var(--primary); }
+    .callout.warn  { background: #1A1200; border-color: #F59E0B; }
 
----
+    .callout p { margin: 0; font-size: 0.93rem; }
+    .callout.warn p { color: #FCD34D; }
 
-## 9. Entertainment Disclaimer
+    /* ── Contact ── */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
 
-- All horoscopes, palm readings, numerology readings, and chat responses are produced by our team for **entertainment purposes only**.
-- This content does not constitute professional, medical, financial, psychological, or any other form of advice.
-- Do not make important life decisions based solely on the readings provided through this app.
+    .contact-box h3 { margin-top: 0; }
 
----
+    .contact-box a {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
 
-## 10. International Data Transfers
+    .contact-box a:hover { background: var(--primary-d); }
 
-Your data may be processed on servers located outside your country of residence. By using Seeble, you consent to the transfer of your data to our service providers' servers, which maintain appropriate data protection standards.
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.8rem;
+      color: var(--grey);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
 
----
+<header>
+  <div class="logo">✦</div>
+  <div>
+    <h1>Seeble</h1>
+    <p>Privacy Policy</p>
+  </div>
+</header>
 
-## 11. Changes to This Policy
+<main>
 
-We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last updated" date at the top of this document. Your continued use of the app after changes constitute acceptance of the updated policy.
+  <!-- Meta -->
+  <div class="meta-card">
+    <div class="item"><label>Last updated</label><span>November 25, 2026</span></div>
+    <div class="item"><label>App</label><span>Seeble</span></div>
+    <div class="item"><label>Developer</label><span>Insider Hub LLC</span></div>
+    <div class="item"><label>Contact</label><span><a href="mailto:support@appseeble.com">support@appseeble.com</a></span></div>
+  </div>
 
----
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Introduction</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Your Information</a></li>
+      <li><a href="#s4">Third-Party Services</a></li>
+      <li><a href="#s5">Data Storage and Security</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Rights</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Entertainment Disclaimer</a></li>
+      <li><a href="#s10">International Data Transfers</a></li>
+      <li><a href="#s11">Changes to This Policy</a></li>
+      <li><a href="#s12">Contact Us</a></li>
+    </ol>
+  </nav>
 
-## 12. Contact Us
+  <!-- 1 -->
+  <section id="s1">
+    <h2 class="section-title"><span class="num">1</span> Introduction</h2>
+    <p>Seeble ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use the Seeble mobile application.</p>
+    <p>By using Seeble, you agree to the collection and use of information as described in this policy.</p>
+  </section>
 
-If you have questions about this Privacy Policy or how we handle your data:
+  <!-- 2 -->
+  <section id="s2">
+    <h2 class="section-title"><span class="num">2</span> Information We Collect</h2>
 
-**Email**: support@appseeble.com  
-**App**: Seeble  
+    <h3>2.1 Information You Provide</h3>
+    <ul>
+      <li><strong>Email address</strong> — used for account creation and authentication</li>
+      <li><strong>Name</strong> — used for your profile and personalization</li>
+      <li><strong>Phone number</strong> — used for your profile (optional)</li>
+      <li><strong>Profile photo</strong> — uploaded by you to personalize your account</li>
+    </ul>
 
----
+    <h3>2.2 Information We Process During App Use</h3>
+    <ul>
+      <li><strong>Palm image</strong> — captured locally on your device when using the Palm Reading feature. This image is processed temporarily to generate your reading and is <strong>NOT stored</strong> on our servers.</li>
+      <li><strong>Chat messages</strong> — messages you send in the Chat feature are sent to our servers so our team can prepare a response. Messages are not stored permanently beyond the current session.</li>
+      <li><strong>Astrological preferences</strong> — your zodiac sign, birth date, and compatibility preferences used to prepare your readings.</li>
+      <li><strong>Soul mate preferences</strong> — gender, age range, and ethnic background preferences used to select your soul mate image.</li>
+    </ul>
 
-*This Privacy Policy was prepared for compliance with Google Play Store and Apple App Store requirements, as well as applicable data protection regulations including GDPR (EU) and LGPD (Brazil).*
+    <h3>2.3 Automatically Collected Information</h3>
+    <ul>
+      <li><strong>App usage data</strong> — which features you use, to improve the app experience.</li>
+      <li><strong>Device information</strong> — operating system version and device type, for compatibility purposes.</li>
+      <li><strong>Advertising and device identifiers</strong> — on iOS, the Advertising Identifier (IDFA), and only if you allow it through the App Tracking Transparency prompt the app shows you; on Android, the Google Advertising ID. Our attribution partner also creates its own identifier for your app installation.</li>
+      <li><strong>Marketing attribution data</strong> — which ad or campaign your installation came from, and the in-app milestones listed in section 3 (creating an account, starting a free trial, subscribing, buying credits), including the amount and currency of a purchase.</li>
+    </ul>
+    <h3>2.4 Apple Health (HealthKit)</h3>
+    <p>If you turn on Apple Health sync (off by default), Seeble writes the duration of your completed meditation, breathing, and Flow sessions to Apple Health as Mindful Minutes. This is <strong>write-only</strong> — the app does not read any data from Apple Health — and your health data <strong>stays on your device</strong>; it is never sent to our servers or shared with any third party. You can turn the sync off at any time in your profile.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2 class="section-title"><span class="num">3</span> How We Use Your Information</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Email, Name, Phone</td><td>Account management and authentication</td></tr>
+          <tr><td>Profile photo</td><td>Display in your profile</td></tr>
+          <tr><td>Palm image</td><td>Produce your palm reading (temporary, not stored)</td></tr>
+          <tr><td>Chat messages</td><td>Respond to your messages</td></tr>
+          <tr><td>Astrological data</td><td>Produce personalized horoscopes and readings</td></tr>
+          <tr><td>Soul mate preferences</td><td>Select your cosmic soul mate image</td></tr>
+          <tr><td>Advertising identifier</td><td>Measure which ads bring people to Seeble</td></tr>
+          <tr><td>Purchase amount and currency</td><td>Measure how well our ads perform</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2 class="section-title"><span class="num">4</span> Third-Party Services</h2>
+    <p>We use the following third-party services to operate the app:</p>
+
+    <h3>4.1 Supabase</h3>
+    <p>We use Supabase (<a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a>) as our backend database and storage provider. Your profile data (email, name, phone, profile photo) is stored securely on Supabase servers.</p>
+    <ul>
+      <li><strong>Supabase Privacy Policy</strong>: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+    </ul>
+
+    <h3>4.2 Cloud processing providers</h3>
+    <p>We rely on commercial cloud-processing providers to deliver chat responses and palm-reading content within reasonable response times. These providers receive only the data strictly required to fulfill your request (message text or palm image) and do not retain it for their own purposes.</p>
+
+    <h3>4.3 AppsFlyer</h3>
+    <p>We use AppsFlyer Ltd. (<a href="https://www.appsflyer.com" target="_blank" rel="noopener">appsflyer.com</a>) as our marketing attribution partner, to measure which ads bring people to Seeble. AppsFlyer receives a hashed account identifier — <strong>never your email address</strong> — your advertising identifier when you allow it, and the value and currency of your purchases. AppsFlyer shares the attribution result with the advertising networks we run campaigns on, currently Meta Platforms, Inc. and Google LLC.</p>
+    <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent before AppsFlyer starts measuring and passes your choice to AppsFlyer, which passes it on to Google. If you decline, AppsFlyer still counts the installation, but tells the advertising networks not to use your data for ad measurement or personalization.</p>
+    <ul>
+      <li><strong>AppsFlyer Privacy Policy</strong>: <a href="https://www.appsflyer.com/legal/services-privacy-policy/" target="_blank" rel="noopener">appsflyer.com/legal/services-privacy-policy</a></li>
+      <li><strong>Meta Privacy Policy</strong>: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">facebook.com/privacy/policy</a></li>
+      <li><strong>Google Privacy Policy</strong>: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2 class="section-title"><span class="num">5</span> Data Storage and Security</h2>
+    <ul>
+      <li>Your profile data is stored on Supabase servers with encryption in transit (TLS/HTTPS).</li>
+      <li>Palm reading images are processed temporarily and are <strong>NOT stored</strong> on any server.</li>
+      <li>Chat messages are processed in real time and are not permanently stored by us.</li>
+      <li>We implement appropriate technical and organizational measures to protect your data.</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2 class="section-title"><span class="num">6</span> Data Retention</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data Type</th><th>Retention Period</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Account data (email, name, phone)</td><td>Until you delete your account</td></tr>
+          <tr><td>Profile photo</td><td>Until you remove it or delete your account</td></tr>
+          <tr><td>Palm reading images</td><td>Not stored — processed in real-time only</td></tr>
+          <tr><td>Chat messages</td><td>Session-only on device; not stored on our servers</td></tr>
+          <tr><td>Astrological preferences</td><td>Until you delete your account</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2 class="section-title"><span class="num">7</span> Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> your personal data</li>
+      <li><strong>Correct</strong> inaccurate data through the Edit Profile screen</li>
+      <li><strong>Delete</strong> your account and all associated data through the "Delete My Account" option in the app</li>
+      <li><strong>Withdraw consent</strong> at any time by deleting the app</li>
+      <li><strong>Change your ad data choice</strong> at any time (European Economic Area, United Kingdom and Switzerland): in the app, under Legal Center → Privacy choices</li>
+      <li><strong>Opt out of ad measurement</strong> at any time: on iOS, in Settings → Privacy &amp; Security → Tracking; on Android, in Settings → Google → Ads → Delete advertising ID</li>
+    </ul>
+    <div class="callout info">
+      <p>To exercise these rights, contact us at: <a href="mailto:support@appseeble.com">support@appseeble.com</a></p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2 class="section-title"><span class="num">8</span> Children's Privacy</h2>
+    <p>Seeble is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2 class="section-title"><span class="num">9</span> Entertainment Disclaimer</h2>
+    <div class="callout warn">
+      <p>⚠ All horoscopes, palm readings, numerology readings, and chat responses are produced by our team for <strong>entertainment purposes only</strong>. This content does not constitute professional, medical, financial, psychological, or any other form of advice. Do not make important life decisions based solely on the readings provided through this app.</p>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2 class="section-title"><span class="num">10</span> International Data Transfers</h2>
+    <p>Your data may be processed on servers located outside your country of residence. By using Seeble, you consent to the transfer of your data to our service providers' servers, which maintain appropriate data protection standards.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2 class="section-title"><span class="num">11</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last updated" date at the top of this document. Your continued use of the app after changes constitute acceptance of the updated policy.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2 class="section-title"><span class="num">12</span> Contact Us</h2>
+    <div class="contact-box">
+      <h3>Questions about this policy?</h3>
+      <p style="color: var(--grey); font-size: 0.9rem; margin-top: 6px;">We're happy to help with any privacy-related questions.</p>
+      <a href="mailto:support@appseeble.com">support@appseeble.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Insider Hub LLC · Seeble · Prepared for compliance with Google Play Store, Apple App Store, GDPR and LGPD.</p>
+</footer>
+
+</body>
+</html>
